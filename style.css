@@ -636,3 +636,10 @@ html {
 body.mobile-menu-open {
   overflow: hidden;
 }
+
+/* Hide hamburger button when mobile sidebar is open */
+body.mobile-menu-open #mobile-menu-btn {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
