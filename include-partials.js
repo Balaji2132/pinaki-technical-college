@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   includePartial('header-partial', 'header.html', function() {
-    // Simple sidebar toggle logic
+    // Mobile sidebar toggle logic
     const menuBtn = document.getElementById('mobile-menu-btn');
     const sidebar = document.getElementById('mobile-sidebar');
     const closeBtn = document.getElementById('close-sidebar');
@@ -17,16 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Open sidebar
     if (menuBtn && sidebar) {
       menuBtn.addEventListener('click', function() {
-        sidebar.style.display = 'block';
-        console.log('Sidebar opened'); // Debug log
+        sidebar.classList.add('active');
+        document.body.classList.add('mobile-menu-open');
+        console.log('Sidebar opened');
       });
     }
     
     // Close sidebar
     function closeSidebar() {
       if (sidebar) {
-        sidebar.style.display = 'none';
-        console.log('Sidebar closed'); // Debug log
+        sidebar.classList.remove('active');
+        document.body.classList.remove('mobile-menu-open');
+        console.log('Sidebar closed');
       }
     }
     
@@ -50,6 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', closeSidebar);
       });
     }
+    
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && sidebar && sidebar.classList.contains('active')) {
+        closeSidebar();
+      }
+    });
   });
   
   includePartial('footer-partial', 'footer.html');

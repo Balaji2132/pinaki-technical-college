@@ -192,281 +192,445 @@ footer {
   }
 }
 
-/* Mobile Sidebar Styles - Complete Rewrite for Visibility */
-.mobile-sidebar-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 9999;
-  display: none;
-}
+/* ===== COURSES PAGE ENHANCEMENTS ===== */
 
-.mobile-sidebar-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 100%;
-  background-color: #ffffff;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.mobile-sidebar-header {
-  background-color: #222;
-  color: white;
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mobile-sidebar-header h2 {
-  margin: 0;
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.mobile-sidebar-close {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-
-.mobile-sidebar-close:hover {
-  background-color: #333;
-}
-
-.mobile-nav-container {
-  padding: 20px;
-}
-
-.mobile-nav-link {
-  display: block;
-  color: #333;
-  text-decoration: none;
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.mobile-nav-link:last-child {
-  border-bottom: none;
-}
-
-.mobile-nav-link:hover {
-  background-color: #f0f0f0;
-  color: #ffb347;
-  padding-left: 10px;
-  border-radius: 4px;
-}
-
-.mobile-nav-link:active {
-  background-color: #e5e7eb;
-  transform: scale(0.98);
-}
-
-/* ===== HOMEPAGE ENHANCEMENTS ===== */
-
-/* Hero Section */
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+/* Courses Hero Section */
+.courses-hero {
   position: relative;
-  margin-top: 0; /* Remove the gap */
-  padding-top: 80px; /* Add padding instead to account for fixed header */
+  background: linear-gradient(135deg, #312e81 0%, #7c3aed 50%, #1e40af 100%);
+  overflow: hidden;
 }
 
-.hero-section::before {
+.courses-hero::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
-  pointer-events: none;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
 }
 
-/* Admission Banner Animation */
-.admission-banner {
+.admission-alert {
   animation: pulse-glow 2s ease-in-out infinite alternate;
-  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
 }
 
-@keyframes pulse-glow {
-  from {
-    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
-  }
-  to {
-    box-shadow: 0 6px 25px rgba(255, 193, 7, 0.5);
-  }
-}
-
-/* CTA Buttons */
-.cta-button {
-  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
-}
-
-.cta-button:hover {
-  box-shadow: 0 6px 25px rgba(255, 193, 7, 0.4);
-}
-
-.cta-button-outline {
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-}
-
-.cta-button-outline:hover {
-  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.3);
-}
-
-/* Feature Cards */
-.feature-card {
-  border: 1px solid #e5e7eb;
+/* Course Detail Cards */
+.course-detail-card {
   transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.course-detail-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(79, 70, 229, 0.2);
+}
+
+/* Interactive Syllabus Sections */
+.course-detail-card button {
+  transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
 }
 
-.feature-card::before {
+.course-detail-card button::before {
   content: '';
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
-.feature-card:hover::before {
+.course-detail-card button:hover::before {
   left: 100%;
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-  border-color: #4f46e5;
-}
-
-/* Stats Animation */
-.stat-item {
-  padding: 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.stat-item:hover {
-  background-color: #f8fafc;
-  transform: scale(1.05);
-}
-
-/* Section Spacing */
-section {
-  scroll-margin-top: 100px;
-}
-
-/* Responsive Text Scaling */
-@media (max-width: 640px) {
-  .hero-section {
-    min-height: 80vh;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+/* Responsive Course Cards */
+@media (max-width: 1024px) {
+  .course-detail-card .lg\:flex {
+    flex-direction: column;
   }
   
-  .admission-banner {
-    padding: 1rem;
+  .course-detail-card .lg\:w-1\/3,
+  .course-detail-card .lg\:w-2\/3 {
+    width: 100%;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .courses-hero {
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+  
+  .course-detail-card {
     margin-bottom: 1.5rem;
   }
   
-  .feature-card {
-    text-align: center;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 1024px) {
-  .hero-section {
-    min-height: 90vh;
-  }
-}
-
-/* Smooth scrolling for the entire page */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus states for accessibility */
-.cta-button:focus,
-.cta-button-outline:focus {
-  outline: 2px solid #4f46e5;
-  outline-offset: 2px;
-}
-
-/* Loading animation for images */
-.feature-card img {
-  transition: opacity 0.3s ease;
-}
-
-/* Print styles */
-@media print {
-  .hero-section {
-    min-height: auto;
-    padding: 2rem 0;
+  .course-detail-card .text-4xl {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
   
-  .cta-button,
-  .cta-button-outline {
+  .grid.sm\:grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .flex.flex-col.sm\:flex-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .flex.flex-col.sm\:flex-row a,
+  .flex.flex-col.sm\:flex-row button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+  }
+}
+
+/* Enhanced Typography */
+.course-detail-card h3 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.course-detail-card h4 {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Improved Focus States */
+.course-detail-card a:focus,
+.course-detail-card button:focus {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Loading States */
+.course-detail-card {
+  opacity: 1;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Animation */
+.course-detail-card:nth-child(1) { animation-delay: 0.1s; }
+.course-detail-card:nth-child(2) { animation-delay: 0.2s; }
+.course-detail-card:nth-child(3) { animation-delay: 0.3s; }
+.course-detail-card:nth-child(4) { animation-delay: 0.4s; }
+.course-detail-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+  .course-detail-card {
+    border: 2px solid #333;
+  }
+  
+  .course-detail-card .bg-gradient-to-br {
+    background: #333 !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .course-detail-card {
+    animation: none;
+  }
+  
+  .course-detail-card:hover {
+    transform: none;
+  }
+  
+  .admission-alert {
+    animation: none;
+  }
+  
+  .course-detail-card button::before {
     display: none;
   }
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .feature-card {
-    border-width: 2px;
+/* Print Styles for Courses */
+@media print {
+  .courses-hero {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 1rem 0 !important;
   }
   
-  .hero-section {
-    background: #000;
-    color: #fff;
+  .course-detail-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 2rem;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .course-detail-card button,
+  .course-detail-card a[href*="contact"] {
+    display: none;
+  }
+  
+  .admission-alert {
+    display: none;
   }
 }
 
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .admission-banner {
-    animation: none;
-  }
-  
-  .feature-card:hover {
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .course-detail-card:hover {
     transform: none;
   }
   
-  .stat-item:hover {
-    transform: none;
-  }
-}
-
-/* Enhanced mobile touch targets */
-@media (max-width: 768px) {
-  .cta-button,
-  .cta-button-outline {
+  .course-detail-card button,
+  .course-detail-card a {
     min-height: 48px;
     padding: 12px 24px;
   }
-  
-  .mobile-nav-link {
-    min-height: 48px;
-    display: flex;
-    align-items: center;
+}
+
+/* Large Screen Enhancements */
+@media (min-width: 1280px) {
+  .course-detail-card {
+    margin-bottom: 3rem;
   }
+  
+  .courses-hero {
+    padding: 120px 0 80px 0;
+  }
+}
+
+/* Ultra-wide Screen Support */
+@media (min-width: 1536px) {
+  .max-w-6xl {
+    max-width: 80rem;
+  }
+}
+
+/* Dark Mode Support (if implemented) */
+@media (prefers-color-scheme: dark) {
+  body.courses-page {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+  
+  .course-detail-card {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+}
+
+/* Smooth Scrolling Enhancement */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for Course Details */
+.course-detail-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.course-detail-card::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.course-detail-card::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.course-detail-card::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Enhanced Mobile Navigation for Courses */
+@media (max-width: 768px) {
+  .courses-hero h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  .courses-hero p {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .admission-alert {
+    padding: 1rem !important;
+    margin: 0 1rem 1.5rem 1rem;
+  }
+  
+  .admission-alert p {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Tablet Specific Adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .course-detail-card .lg\:flex {
+    flex-direction: column;
+  }
+  
+  .grid.lg\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid.md\:grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ===== MOBILE SIDEBAR MENU STYLES ===== */
+
+/* Mobile sidebar overlay - hidden by default */
+.mobile-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show mobile sidebar when active */
+.mobile-sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile sidebar content */
+.mobile-sidebar-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #222;
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Show sidebar content when active */
+.mobile-sidebar-overlay.active .mobile-sidebar-content {
+  transform: translateX(0);
+}
+
+/* Mobile sidebar header */
+.mobile-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #444;
+  background-color: #333;
+}
+
+/* Close button */
+.mobile-sidebar-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-sidebar-close:hover {
+  background-color: #555;
+}
+
+/* Mobile navigation container */
+.mobile-nav-container {
+  padding: 1rem 0;
+}
+
+/* Mobile navigation links */
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+  background-color: #333;
+  padding-left: 2rem;
+  color: #ffb347;
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 768px) {
+  .mobile-sidebar-overlay {
+    display: none !important;
+  }
+  
+  #mobile-menu-btn {
+    display: none;
+  }
+}
+
+/* Ensure desktop nav is visible on larger screens */
+@media (min-width: 768px) {
+  nav.hidden.md\:flex {
+    display: flex !important;
+  }
+}
+
+/* Site title link styling */
+.site-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title-link:hover {
+  color: #ffb347;
+  transition: color 0.2s ease;
+}
+
+/* Mobile menu button styling */
+#mobile-menu-btn {
+  z-index: 10000;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
 }
