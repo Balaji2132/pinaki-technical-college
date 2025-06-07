@@ -8,6 +8,11 @@ body {
   flex-direction: column;
 }
 
+/* Special body styling for homepage */
+body.homepage {
+  background: #f4f4f4;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -278,7 +283,8 @@ footer {
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: 80px;
+  margin-top: 0; /* Remove the gap */
+  padding-top: 80px; /* Add padding instead to account for fixed header */
 }
 
 .hero-section::before {
