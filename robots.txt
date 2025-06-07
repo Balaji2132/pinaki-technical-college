@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pinakitechnicalcollege.com/sitemap.xml
+
+# Allow search engines to index all important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /courses.html
+Allow: /contact.html
+Allow: /faculty.html
+Allow: /gallery.html
+Allow: /blog.html
+
+# Disallow crawling of development files
+Disallow: /include-partials.js
+Disallow: /*.md
+
+# Crawl delay to be respectful to server resources
+Crawl-delay: 1
