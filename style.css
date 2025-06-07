@@ -298,32 +298,15 @@ footer {
 /* Enhanced Typography */
 .course-detail-card h3 {
   font-weight: 700;
-  letter-spacing: -0.025em;
 }
 
-.course-detail-card h4 {
-  font-weight: 600;
-  letter-spacing: -0.015em;
-}
+/* ===== CONTACT PAGE STYLES ===== */
 
-/* Improved Focus States */
-.course-detail-card a:focus,
-.course-detail-card button:focus {
-  outline: 2px solid #4f46e5;
-  outline-offset: 2px;
-  border-radius: 8px;
-}
-
-/* Loading States */
-.course-detail-card {
-  opacity: 1;
-  animation: fadeIn 0.6s ease-out;
-}
-
-@keyframes fadeIn {
+/* Contact Page Animations */
+@keyframes slideInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -331,41 +314,60 @@ footer {
   }
 }
 
-/* Staggered Animation */
-.course-detail-card:nth-child(1) { animation-delay: 0.1s; }
-.course-detail-card:nth-child(2) { animation-delay: 0.2s; }
-.course-detail-card:nth-child(3) { animation-delay: 0.3s; }
-.course-detail-card:nth-child(4) { animation-delay: 0.4s; }
-.course-detail-card:nth-child(5) { animation-delay: 0.5s; }
-
-/* High Contrast Support */
-@media (prefers-contrast: high) {
-  .course-detail-card {
-    border: 2px solid #333;
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  .course-detail-card .bg-gradient-to-br {
-    background: #333 !important;
+  50% {
+    transform: scale(1.05);
   }
 }
 
-/* Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  .course-detail-card {
-    animation: none;
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
   }
-  
-  .course-detail-card:hover {
-    transform: none;
+  50% { 
+    transform: translateY(-10px); 
   }
-  
-  .admission-alert {
-    animation: none;
-  }
-  
-  .course-detail-card button::before {
-    display: none;
-  }
+}
+
+/* Contact Page Animation Classes */
+.animate-slide-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-pulse-hover:hover {
+  animation: pulse 0.3s ease-in-out;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Contact Page Component Styles */
+.contact-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input-focus-effect:focus {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  border-color: #6366f1;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Print Styles for Courses */
