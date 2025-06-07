@@ -54,14 +54,15 @@ main {
   margin-right: auto;
 }
 footer {
-  position: fixed;
-  bottom: 0;
+
   left: 0;
   width: 100%;
   background: #222;
   color: #fff;
   z-index: 1000;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  /* Remove fixed positioning so footer is at the bottom of the page, not the viewport */
+  margin-top: 2rem;
 }
 .footer-container {
   max-width: 1200px;
