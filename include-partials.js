@@ -7,26 +7,50 @@ document.addEventListener('DOMContentLoaded', function() {
         if (typeof callback === 'function') callback();
       });
   }
+  
   includePartial('header-partial', 'header.html', function() {
-    // Re-attach sidebar toggle logic after header is injected
+    // Simple sidebar toggle logic
     const menuBtn = document.getElementById('mobile-menu-btn');
     const sidebar = document.getElementById('mobile-sidebar');
     const closeBtn = document.getElementById('close-sidebar');
-    if(menuBtn && sidebar) {
+    
+    // Open sidebar
+    if (menuBtn && sidebar) {
       menuBtn.addEventListener('click', function() {
-        sidebar.classList.remove('hidden');
+        sidebar.style.display = 'block';
+        console.log('Sidebar opened'); // Debug log
       });
     }
-    if(closeBtn && sidebar) {
-      closeBtn.addEventListener('click', function() {
-        sidebar.classList.add('hidden');
-      });
+    
+    // Close sidebar
+    function closeSidebar() {
+      if (sidebar) {
+        sidebar.style.display = 'none';
+        console.log('Sidebar closed'); // Debug log
+      }
     }
-    if(sidebar) {
+    
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeSidebar);
+    }
+    
+    // Close on overlay click
+    if (sidebar) {
       sidebar.addEventListener('click', function(e) {
-        if (e.target === sidebar) sidebar.classList.add('hidden');
+        if (e.target === sidebar) {
+          closeSidebar();
+        }
+      });
+    }
+    
+    // Close on link click
+    const links = sidebar?.querySelectorAll('a');
+    if (links) {
+      links.forEach(link => {
+        link.addEventListener('click', closeSidebar);
       });
     }
   });
+  
   includePartial('footer-partial', 'footer.html');
-}); 
+});
