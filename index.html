@@ -3,16 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pinaki Technical College</title>
+  <title>Pinaki Technical College | Premier Technical Education in Bihar</title>
+  <meta name="description" content="Join Pinaki Technical College for world-class technical education. Admissions open! Excellent infrastructure, strong placement programs, and industry partnerships.">
   <link href="style.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50">
   <div id="header-partial"></div>
-  <main class="px-2 sm:px-4 md:px-8 py-4 max-w-3xl mx-auto">
-    <h2 class="text-2xl sm:text-3xl font-bold text-center text-indigo-800 mb-4 tracking-wide">Welcome to Pinaki Technical College</h2>
-    <p class="text-base sm:text-lg text-gray-700 leading-relaxed">This is a placeholder homepage. Update this content in index.html.</p>
+  
+  <!-- Hero Section -->
+  <section class="hero-section bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div class="text-center">
+        <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+          Welcome to <span class="text-yellow-400">Pinaki Technical College</span>
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed text-gray-200">
+          Shaping Future Leaders Through Excellence in Technical Education
+        </p>
+        <div class="admission-banner bg-yellow-400 text-gray-900 px-6 py-4 rounded-lg inline-block mb-8 transform hover:scale-105 transition-transform duration-200">
+          <p class="text-lg sm:text-xl font-bold">🎓 ADMISSIONS OPEN 2025-26!</p>
+          <p class="text-sm sm:text-base">Apply now for world-class technical education</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="contact.html" class="cta-button bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg">
+            Apply Now
+          </a>
+          <a href="courses.html" class="cta-button-outline border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-200">
+            View Courses
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Contact Banner -->
+  <section class="bg-yellow-400 py-4 text-center text-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-sm sm:text-base font-medium">
+        📞 <strong>Quick Admission Inquiry:</strong> Call us at <a href="tel:7870101168" class="underline hover:text-blue-700">7870101168</a> | 
+        📧 Email: <a href="mailto:pinakitechnical@gmail.com" class="underline hover:text-blue-700">pinakitechnical@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    
+    <!-- About Section -->
+    <section class="mb-12 sm:mb-16">
+      <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8 lg:p-10">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-indigo-800 mb-6 sm:mb-8">
+          Excellence in Technical Education
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="space-y-4 sm:space-y-6">
+            <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+              Located in the heart of Bihar at <strong>139 NH, Arwal, Patna Main Road</strong>, Pinaki Technical College stands as a beacon of technical excellence, providing world-class education and training to aspiring professionals.
+            </p>
+            <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+              With our commitment to academic excellence, industry-relevant curriculum, and state-of-the-art infrastructure, we prepare our students for successful careers in their chosen fields.
+            </p>
+          </div>
+          <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-indigo-800 mb-4">Why Choose Us?</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> AICTE Approved Programs</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Industry Expert Faculty</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 100% Placement Assistance</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Modern Infrastructure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="mb-12 sm:mb-16">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-indigo-800 mb-8 sm:mb-12">
+        World-Class Facilities & Programs
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Infrastructure -->
+        <div class="feature-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <div class="text-4xl mb-4">🏛️</div>
+          <h3 class="text-xl font-semibold text-indigo-800 mb-3">Modern Infrastructure</h3>
+          <p class="text-gray-700">State-of-the-art classrooms, advanced laboratories, and modern equipment to provide hands-on learning experience.</p>
+        </div>
+
+        <!-- Library -->
+        <div class="feature-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <div class="text-4xl mb-4">📚</div>
+          <h3 class="text-xl font-semibold text-indigo-800 mb-3">Comprehensive Library</h3>
+          <p class="text-gray-700">Extensive collection of books, journals, and digital resources. Specialized library science programs with oriental literature focus.</p>
+        </div>
+
+        <!-- Placement -->
+        <div class="feature-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-xl font-semibold text-indigo-800 mb-3">Strong Placement Cell</h3>
+          <p class="text-gray-700">Dedicated placement assistance with industry partnerships, internships, and career counseling for 100% job placement.</p>
+        </div>
+
+        <!-- Industrial Training -->
+        <div class="feature-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <div class="text-4xl mb-4">⚙️</div>
+          <h3 class="text-xl font-semibold text-indigo-800 mb-3">Industrial Training</h3>
+          <p class="text-gray-700">Real-world exposure through industrial training programs, workshops, and practical sessions with industry experts.</p>
+        </div>
+
+        <!-- Faculty -->
+        <div class="feature-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <div class="text-4xl mb-4">👨‍🏫</div>
+          <h3 class="text-xl font-semibold text-indigo-800 mb-3">Expert Faculty</h3>
+          <p class="text-gray-700">Highly qualified and experienced faculty members with industry expertise and academic excellence.</p>
+        </div>
+
+        <!-- Student Life -->
+        <div class="feature-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <div class="text-4xl mb-4">🌟</div>
+          <h3 class="text-xl font-semibold text-indigo-800 mb-3">Holistic Development</h3>
+          <p class="text-gray-700">Comprehensive student development through extracurricular activities, sports, and cultural programs.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Admission CTA Section -->
+    <section class="mb-12 sm:mb-16">
+      <div class="bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl p-6 sm:p-8 lg:p-10 text-center">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Ready to Join Us?</h2>
+        <p class="text-lg sm:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto">
+          Take the first step towards a successful career in technical education. Our admissions team is ready to guide you through the process.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="contact.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg">
+            📝 Fill Admission Form
+          </a>
+          <div class="text-center sm:text-left">
+            <p class="text-sm sm:text-base mb-2">Or contact us directly:</p>
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm sm:text-base">
+              <a href="tel:7870101168" class="hover:text-yellow-300 transition-colors">📞 7870101168</a>
+              <a href="mailto:pinakitechnical@gmail.com" class="hover:text-yellow-300 transition-colors">📧 pinakitechnical@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="mb-12 sm:mb-16">
+      <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center text-indigo-800 mb-8">Our Achievements</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+          <div class="stat-item">
+            <div class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-2">500+</div>
+            <div class="text-sm sm:text-base text-gray-600">Students Graduated</div>
+          </div>
+          <div class="stat-item">
+            <div class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-2">95%</div>
+            <div class="text-sm sm:text-base text-gray-600">Placement Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-2">15+</div>
+            <div class="text-sm sm:text-base text-gray-600">Years of Excellence</div>
+          </div>
+          <div class="stat-item">
+            <div class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-2">50+</div>
+            <div class="text-sm sm:text-base text-gray-600">Industry Partners</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+  
   <div id="footer-partial"></div>
   <script src="include-partials.js"></script>
 </body>
