@@ -13,6 +13,12 @@ Allow: /faculty.html
 Allow: /gallery.html
 Allow: /blog.html
 
+# Allow crawling of favicon and icon files for better search engine display
+Allow: /favicon.ico
+Allow: /favicon-*.png
+Allow: /Images/logo.png
+Allow: /Images/6d00adf3fa77be5414f1ec35964b9f4c.ico/
+
 # Disallow crawling of development files
 Disallow: /include-partials.js
 Disallow: /*.md

@@ -1,0 +1,40 @@
+# Favicon optimization for better search engine recognition
+<Files "favicon.ico">
+    Header set Cache-Control "public, max-age=31536000"
+    Header set Expires "access plus 1 year"
+</Files>
+
+# PNG favicon files
+<FilesMatch "\.(png)$">
+    Header set Cache-Control "public, max-age=31536000"
+</FilesMatch>
+
+# Force favicon.ico to be served as image/x-icon
+<Files "favicon.ico">
+    ForceType image/x-icon
+</Files>
+
+# Ensure proper MIME types for favicon files
+AddType image/x-icon .ico
+AddType image/png .png
+
+# Enable compression for better performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE image/png
+</IfModule>
+
+# Security headers for better SEO
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 404 error handling for missing favicon
+ErrorDocument 404 /favicon.ico
+
+# Redirect old favicon paths to new location
+RedirectMatch 301 ^/images/favicon\.ico$ /favicon.ico
+RedirectMatch 301 ^/img/favicon\.ico$ /favicon.ico
