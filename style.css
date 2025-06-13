@@ -30,6 +30,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem 1.5rem;
+  position: relative;
 }
 header h1 {
   font-size: 1.5rem;
@@ -642,4 +643,111 @@ body.mobile-menu-open #mobile-menu-btn {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
+}
+
+/* Logo styling */
+.header-container img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.header-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure logo maintains aspect ratio and proper sizing */
+.header-container .flex.items-center.space-x-3 {
+  min-width: 0; /* Prevent flex item from overflowing */
+}
+
+/* Mobile-specific logo adjustments */
+@media (max-width: 768px) {
+  .header-container img {
+    height: 2.5rem; /* 40px - slightly larger on mobile for better visibility */
+    width: 2.5rem;
+  }
+  
+  .header-container h1 {
+    font-size: 1.125rem; /* Slightly smaller text on mobile to accommodate logo */
+  }
+  
+  .header-container .flex.flex-col p {
+    font-size: 0.625rem; /* Smaller subtitle on mobile */
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-container img {
+    height: 2.75rem; /* 44px */
+    width: 2.75rem;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1025px) {
+  .header-container img {
+    height: 3rem; /* 48px */
+    width: 3rem;
+  }
+}
+
+/* Header Layout Fixes */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem;
+  position: relative;
+}
+
+/* Navigation specific fixes for large screens */
+@media (min-width: 768px) {
+  .header-container {
+    padding: 0.5rem 1rem;
+  }
+  
+  .header-container nav {
+    white-space: nowrap;
+    overflow: visible;
+  }
+  
+  .header-container nav a {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Large screen specific adjustments */
+@media (min-width: 1024px) {
+  .header-container {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .header-container nav a {
+    font-size: 0.95rem;
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+/* Extra large screen adjustments */
+@media (min-width: 1280px) {
+  .header-container nav a {
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+  }
+}
+
+/* Ensure text doesn't wrap on medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-container h1 {
+    font-size: 1rem !important;
+  }
+  
+  .header-container p {
+    font-size: 0.7rem !important;
+  }
 }

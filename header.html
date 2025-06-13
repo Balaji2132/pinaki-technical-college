@@ -1,33 +1,44 @@
-<header class="bg-[#222] text-white shadow-md relative">
-  <div class="header-container flex flex-row items-center justify-between max-w-6xl mx-auto py-3 px-4 md:px-8">
+<header class="bg-[#222] text-white shadow-md relative">  <div class="header-container flex flex-row items-center justify-between max-w-7xl mx-auto py-3 px-2 md:px-4">
     <!-- Hamburger button for mobile, left of site title -->
-    <button id="mobile-menu-btn" class="block md:hidden mr-3 p-2 border-2 border-dashed border-[#ffb347] rounded focus:outline-none hover:bg-[#333] transition-colors" aria-label="Open menu">
+    <button id="mobile-menu-btn" class="block md:hidden mr-2 p-2 border-2 border-dashed border-[#ffb347] rounded focus:outline-none hover:bg-[#333] transition-colors" aria-label="Open menu">
       <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
-    <div class="flex flex-col">
-      <h1 class="text-xl md:text-2xl font-bold tracking-wide mb-0"><a href="index.html" class="site-title-link">Pinaki Technical College</a></h1>
-      <p class="text-xs md:text-sm text-gray-300 mt-1">Affiliated by Maulana Mazharul Haque Arabic and Persian University, Patna</p>
+    
+    <!-- Logo and College Name -->
+    <div class="flex items-center space-x-2 md:space-x-3 max-w-none">
+      <a href="index.html" class="flex-shrink-0">
+        <img src="Images/logo.png" alt="Pinaki Technical College Logo" class="h-10 w-10 md:h-12 md:w-12 object-contain">
+      </a>
+      <div class="flex flex-col">
+        <h1 class="text-lg md:text-xl lg:text-2xl font-bold tracking-wide mb-0 whitespace-nowrap">
+          <a href="index.html" class="site-title-link hover:text-[#ffb347] transition-colors">Pinaki Technical College</a>
+        </h1>
+        <p class="text-xs md:text-sm text-gray-300 mt-1 whitespace-nowrap">Affiliated by Maulana Mazharul Haque Arabic and Persian University, Patna</p>
+      </div>
     </div>
+    
     <!-- Desktop nav -->
-    <nav class="hidden md:flex flex-wrap gap-2 md:gap-4 ml-auto">
-      <a href="index.html" class="hover:text-[#ffb347] transition-colors">Home</a>
-      <a href="about.html" class="hover:text-[#ffb347] transition-colors">About</a>
-      <a href="courses.html" class="hover:text-[#ffb347] transition-colors">Courses</a>
-      <a href="faculty.html" class="hover:text-[#ffb347] transition-colors">Faculty</a>
-      <a href="gallery.html" class="hover:text-[#ffb347] transition-colors">Gallery</a>
-      <a href="blog.html" class="hover:text-[#ffb347] transition-colors">Blog</a>
-      <a href="contact.html" class="hover:text-[#ffb347] transition-colors">Contact</a>
+    <nav class="hidden md:flex gap-1 lg:gap-2 xl:gap-3 ml-4 flex-shrink-0">
+      <a href="index.html" class="hover:text-[#ffb347] transition-colors text-sm lg:text-base px-1 lg:px-2">Home</a>
+      <a href="about.html" class="hover:text-[#ffb347] transition-colors text-sm lg:text-base px-1 lg:px-2">About</a>
+      <a href="courses.html" class="hover:text-[#ffb347] transition-colors text-sm lg:text-base px-1 lg:px-2">Courses</a>
+      <a href="faculty.html" class="hover:text-[#ffb347] transition-colors text-sm lg:text-base px-1 lg:px-2">Faculty</a>
+      <a href="gallery.html" class="hover:text-[#ffb347] transition-colors text-sm lg:text-base px-1 lg:px-2">Gallery</a>
+      <a href="blog.html" class="hover:text-[#ffb347] transition-colors text-sm lg:text-base px-1 lg:px-2">Blog</a>
+      <a href="contact.html" class="hover:text-[#ffb347] transition-colors text-sm lg:text-base px-1 lg:px-2">Contact</a>
     </nav>
   </div>
-  
-  <!-- Mobile sidebar menu -->
+    <!-- Mobile sidebar menu -->
   <div id="mobile-sidebar" class="mobile-sidebar-overlay">
     <div class="mobile-sidebar-content">
       <!-- Header -->
       <div class="mobile-sidebar-header">
-        <h2 class="text-lg font-semibold">Menu</h2>
+        <div class="flex items-center space-x-3">
+          <img src="Images/logo.png" alt="Pinaki Technical College Logo" class="h-8 w-8 object-contain">
+          <h2 class="text-lg font-semibold">Menu</h2>
+        </div>
         <button id="close-sidebar" class="mobile-sidebar-close" aria-label="Close menu">&times;</button>
       </div>
       
