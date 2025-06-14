@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (sidebar) {
         sidebar.classList.remove('active');
         document.body.classList.remove('mobile-menu-open');
+      }
     }
     
     if (closeBtn) {
