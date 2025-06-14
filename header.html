@@ -1,23 +1,23 @@
 <header class="bg-[#222] text-white shadow-md relative">  <div class="header-container flex flex-row items-center justify-between max-w-7xl mx-auto py-3 px-2 md:px-4">
-    <!-- Hamburger button for mobile, left of site title -->
-    <button id="mobile-menu-btn" class="block md:hidden mr-2 p-2 border-2 border-dashed border-[#ffb347] rounded focus:outline-none hover:bg-[#333] transition-colors" aria-label="Open menu">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-    
-    <!-- Logo and College Name -->
-    <div class="flex items-center space-x-2 md:space-x-3 max-w-none">
+    <!-- Logo and College Name - Left Side -->
+    <div class="flex items-center space-x-2 md:space-x-3 flex-1 min-w-0">
       <a href="index.html" class="flex-shrink-0">
         <img src="Images/logo.png" alt="Pinaki Technical College Logo" class="h-10 w-10 md:h-12 md:w-12 object-contain">
       </a>
-      <div class="flex flex-col">
-        <h1 class="text-lg md:text-xl lg:text-2xl font-bold tracking-wide mb-0 whitespace-nowrap">
+      <div class="flex flex-col min-w-0 flex-1">
+        <h1 class="text-sm sm:text-base md:text-xl lg:text-2xl font-bold tracking-wide mb-0 truncate">
           <a href="index.html" class="site-title-link hover:text-[#ffb347] transition-colors">Pinaki Technical College</a>
         </h1>
-        <p class="text-xs md:text-sm text-gray-300 mt-1 whitespace-nowrap">Affiliated by Maulana Mazharul Haque Arabic and Persian University, Patna</p>
+        <p class="text-xs md:text-sm text-gray-300 mt-1 truncate">Affiliated by Maulana Mazharul Haque Arabic and Persian University, Patna</p>
       </div>
     </div>
+    
+    <!-- Hamburger button for mobile - Right Side -->
+    <button id="mobile-menu-btn" class="block md:hidden ml-2 p-2 rounded focus:outline-none hover:bg-[#333] transition-colors flex-shrink-0" aria-label="Open menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
     
     <!-- Desktop nav -->
     <nav class="hidden md:flex gap-1 lg:gap-2 xl:gap-3 ml-4 flex-shrink-0">
