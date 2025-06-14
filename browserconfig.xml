@@ -2,17 +2,11 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="Images/6d00adf3fa77be5414f1ec35964b9f4c.ico/ms-icon-70x70.png"/>
-      <square150x150logo src="Images/6d00adf3fa77be5414f1ec35964b9f4c.ico/ms-icon-150x150.png"/>
-      <wide310x150logo src="Images/6d00adf3fa77be5414f1ec35964b9f4c.ico/ms-icon-310x310.png"/>
-      <square310x310logo src="Images/6d00adf3fa77be5414f1ec35964b9f4c.ico/ms-icon-310x310.png"/>
+      <square70x70logo src="/favicon-48x48.png"/>
+      <square150x150logo src="/favicon-48x48.png"/>
+      <wide310x150logo src="/favicon-48x48.png"/>
+      <square310x310logo src="/favicon-48x48.png"/>
       <TileColor>#ffffff</TileColor>
-      <TileImage src="Images/6d00adf3fa77be5414f1ec35964b9f4c.ico/ms-icon-144x144.png"/>
     </tile>
-    <notification>
-      <polling-uri src="https://pinakitechnicalcollege.com/"/>
-      <frequency>30</frequency>
-      <cycle>1</cycle>
-    </notification>
   </msapplication>
 </browserconfig>
