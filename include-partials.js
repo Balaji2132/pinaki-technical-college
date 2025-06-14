@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
       menuBtn.addEventListener('click', function() {
         sidebar.classList.add('active');
         document.body.classList.add('mobile-menu-open');
-        console.log('Sidebar opened');
       });
     }
     
@@ -28,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
       if (sidebar) {
         sidebar.classList.remove('active');
         document.body.classList.remove('mobile-menu-open');
-        console.log('Sidebar closed');
-      }
     }
     
     if (closeBtn) {
