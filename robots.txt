@@ -15,9 +15,33 @@ Allow: /blog.html
 
 # Allow crawling of favicon and icon files for better search engine display
 Allow: /favicon.ico
-Allow: /favicon-*.png
+Allow: /favicon-16x16.png
+Allow: /favicon-32x32.png
 Allow: /Images/logo.png
 Allow: /Images/6d00adf3fa77be5414f1ec35964b9f4c.ico/
+Allow: /browserconfig.xml
+Allow: /manifest.json
+
+# Bing specific crawling directives
+User-agent: bingbot
+Allow: /
+Allow: /favicon.ico
+Allow: /Images/
+Crawl-delay: 1
+
+User-agent: msnbot
+Allow: /
+Allow: /favicon.ico
+Allow: /Images/
+Crawl-delay: 1
+
+# Allow favicon file types
+Allow: *.ico
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
 
 # Disallow crawling of development files
 Disallow: /include-partials.js
